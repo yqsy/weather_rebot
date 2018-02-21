@@ -18,6 +18,9 @@
 ```
 # 日志
 /var/log/weather_rebot/weather_rebot.log
+
+# 播放
+~/env/voice-station/1.mp3
 ```
 
 
@@ -31,6 +34,13 @@ mkdir ~/env/voice-station
 cd ~/env/voice-station
 # 1.mp3
 
-# 启动
-python3 weather_rebot.py
+# 安装
+sudo pip3 install git+git://github.com/yqsy/weather_rebot.git@master
+
+# cron
+sudo bash -c 'cat >> /etc/crontab' << EOF
+* 8 * * * pi weather_rebot > /dev/null 2>&1
+EOF
+
+sudo systemctl restart cron
 ```
