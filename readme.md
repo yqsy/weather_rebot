@@ -35,11 +35,12 @@ cd ~/env/voice-station
 # 1.mp3
 
 # 安装
+sudo apt-get install mplayer -y
 sudo pip3 install git+git://github.com/yqsy/weather_rebot.git@master
 
 # cron
 sudo bash -c 'cat >> /etc/crontab' << EOF
-* 8 * * * pi weather_rebot > /dev/null 2>&1
+0 8 * * * pi weather_rebot > /dev/null 2>&1
 EOF
 
 sudo systemctl restart cron
