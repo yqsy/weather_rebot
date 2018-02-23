@@ -68,7 +68,7 @@ def main():
     two_temperature = tmp_temperature.findAll(
         "li")[2].getText()  # "4° / 9°"  regular: (\d)° \/ (\d)°
 
-    regex = r"(\d)° \/ (\d)°"
+    regex = r"(\d*)° \/ (\d*)°"
 
     matches = list(re.finditer(regex, two_temperature))
 
