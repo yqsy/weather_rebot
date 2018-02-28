@@ -19,8 +19,6 @@
 # 日志
 /var/log/weather_rebot/weather_rebot.log
 
-# 播放
-~/env/voice-station/1.mp3
 ```
 
 
@@ -28,11 +26,6 @@
 # 创建日志目录
 sudo mkdir /var/log/weather_rebot
 sudo chown $(id -u):$(id -g) /var/log/weather_rebot
-
-# 创建起床音乐
-mkdir ~/env/voice-station
-cd ~/env/voice-station
-# 1.mp3
 
 # 安装
 sudo apt-get install mplayer -y

@@ -94,7 +94,7 @@ def main():
     req_url = "http://tts.baidu.com/text2audio?\
     idx=1&tex={}&cuid=baidu_speech_demo&cod=2&lan=zh&ctp=1&pdt=1&spd=4&per=4&vol=5&pit=5".format(text)
 
-    os.system('mplayer -vo alsa ~/env/voice-station/1.mp3')
+    # os.system('mplayer -vo alsa ~/env/voice-station/1.mp3')
 
     os.system('mplayer -vo alsa "{}"'.format(req_url))
 
